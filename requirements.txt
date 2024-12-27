@@ -1,0 +1,50 @@
+# Flask and Extensions
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-Marshmallow==0.15.0
+Flask-Migrate==4.0.5
+flask-cors==4.0.0
+marshmallow-sqlalchemy==0.29.0
+python-dotenv==1.0.0
+
+# Database
+SQLAlchemy==2.0.23
+psycopg2-binary==2.9.9  # PostgreSQL driver (pre-compiled)
+alembic==1.12.1  # Database migrations
+
+# Authentication and Security
+PyJWT==2.8.0
+bcrypt==4.0.1
+
+# Utilities
+Werkzeug==3.0.1
+click==8.1.7
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+python-dateutil==2.8.2
+six==1.16.0
+pytz==2023.3.post1
+
+# File Handling and Media
+python-magic==0.4.27  # File type detection
+boto3==1.29.3  # AWS S3 integration
+
+# Testing and Development
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-flask==1.3.0
+factory-boy==3.3.0
+Faker==20.1.0
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+mypy==1.7.0
+pre-commit==3.5.0
+
+# Monitoring and Logging
+sentry-sdk==1.34.0
+python-json-logger==2.0.7
+
+# Production
+gunicorn==21.2.0
