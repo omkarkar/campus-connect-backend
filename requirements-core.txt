@@ -10,8 +10,8 @@ python-dotenv==1.0.0
 
 # Database
 SQLAlchemy==2.0.23
-psycopg2-binary==2.9.9  # PostgreSQL driver (pre-compiled)
-alembic==1.12.1  # Database migrations
+psycopg2-binary==2.9.9
+alembic==1.12.1
 
 # Authentication and Security
 PyJWT==2.8.0
@@ -28,24 +28,9 @@ six==1.16.0
 pytz==2023.3.post1
 
 # File Handling and Media
-python-magic==0.4.27  # File type detection
-boto3==1.29.3  # AWS S3 integration
-
-# Testing and Development
-pytest==7.4.3
-pytest-cov==4.1.0
-pytest-flask==1.3.0
-factory-boy==3.3.0
-Faker==20.1.0
-black==23.11.0
-flake8==6.1.0
-isort==5.12.0
-mypy==1.7.0
-pre-commit==3.5.0
-
-# Monitoring and Logging
-sentry-sdk==1.34.0
-python-json-logger==2.0.7
+python-magic==0.4.27
+boto3==1.29.3
 
 # Production
 gunicorn==21.2.0
+redis==5.0.1

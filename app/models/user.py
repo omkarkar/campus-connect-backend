@@ -12,12 +12,23 @@ class User(db.Model):
     status = db.Column(db.String(255))
     last_seen = db.Column(db.DateTime)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    performed_group_events = db.relationship('GroupEvent',
+        foreign_keys='GroupEvent.user_id',
+        backref=db.backref('performer', lazy='joined'),
+        lazy=True
+    )
+    
+    targeted_group_events = db.relationship('GroupEvent',
+        foreign_keys='GroupEvent.target_user_id',
+        backref=db.backref('target', lazy='joined'),
+        lazy=True
+    )
     
     # Relationships
     courses = db.relationship('Course', backref='professor', lazy=True)
     messages = db.relationship('Message', backref='sender', lazy=True)
     notifications = db.relationship('Notification', backref='user', lazy=True)
-    group_events = db.relationship('GroupEvent', backref='user', lazy=True)
 
     def __repr__(self):
         return f'<User {self.first_name} {self.last_name}>'
